@@ -9,10 +9,10 @@ const Board = () => {
   
     if (status == 'Winner is Player O ' || status == 'Winner is Player X ') {
         alert("Confirm to restart!")
-        setTimeout("location.reload(true);", 500);
+        setTimeout("location.reload(true);", 50);
     }
     const restartGame = () => {
-      setTimeout("location.reload(true);", 500);
+      setTimeout("location.reload(true);", 50);
     };
   
     // Part 1 step 1 code goes here
@@ -49,9 +49,9 @@ const Board = () => {
           {renderSquare(8)}
         </div>
         <div id="info">
-          <button onClick={() => restartGame()}>Restart Game</button>
           <h1 id="turn">{nextPlayer}</h1>
           <h1>{status}</h1>
+          <button onClick={() => restartGame()}>Restart Game</button>
         </div>
       </div>
     );
