@@ -4,13 +4,14 @@ const Board = () => {
     const [player, setPlayer] = React.useState(1);
     const [gameState, setGameState] = React.useState([]);
     let status = `Winner is ${checkForWinner(gameState)}`;
+
+    console.log(status);
   
-    //if (status === 'Winner is Player O' || 'Winner is Player X') {
-    //alert("Restart in 3 seconds!")
-    //setTimeout("location.reload(true);", 3000);
-    //}
+    if (status == 'Winner is Player O ' || status == 'Winner is Player X ') {
+        alert("Confirm to restart!")
+        setTimeout("location.reload(true);", 500);
+    }
     const restartGame = () => {
-      //alert("Restart in 3 seconds!")
       setTimeout("location.reload(true);", 500);
     };
   
