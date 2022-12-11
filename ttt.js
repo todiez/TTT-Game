@@ -30,6 +30,7 @@ const Board = () => {
       // use properties to pass callback function takeTurn to Child
       return <Square takeTurn={takeTurn} id={i}></Square>;
     }
+    
   
     return (
       <div className="game-board">
